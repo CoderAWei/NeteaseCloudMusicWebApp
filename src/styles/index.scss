@@ -1,0 +1,233 @@
+@import './vant.scss';
+
+html, body, #app,
+.page-container{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  // background: url('../assets/bg.png');
+  // background-color: $primary-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// 覆盖svg的默认颜色
+path {
+  fill: inherit !important
+}
+
+/*input placeholder文字颜色*/
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $primary-color;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox */
+  color: $primary-color;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $primary-color;
+}
+
+// 遮罩层
+.modal{
+  &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($dark-color, .3);
+    z-index: -1;
+  }
+}
+
+
+.main-container{
+  height: 100%;
+  &>div{
+    padding: 10px 10px 0 10px;
+    // height: calc(100% - 50px);
+  }
+}
+.xzw-tabbar{
+  height: 50px;
+}
+
+.container{
+  &-recommend{
+    padding: 10px ;
+  }
+}
+
+.song-list{
+  .song{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child){
+      border-bottom: 1px solid $primary-color;
+    }
+    &-right{
+      width: calc(100% - 50px);
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-bottom{
+        font-size: 12px;
+        line-height: 16px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        display: flex;
+        display: -webkit-box;
+        line-clamp: 1;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        .song-reason{
+          color: $second-color;
+          margin-right: 4px;
+          line-height: 12px;
+        }
+        .song-tag{
+          color: $dark-text-color;
+    //       overflow: hidden;
+    // text-overflow: ellipsis;
+    // -ms-text-overflow: ellipsis;
+    // display: box;
+    // display: -webkit-box;
+    // line-clamp: 1;
+    // -webkit-line-clamp: 1;
+    // -webkit-box-orient: vertical;
+        }
+      }
+    }
+    &-name{
+      font-size: 14px;
+    }
+    &-avatar{
+      border-radius: 4px;
+    }
+  }
+}
+
+// 旋转专辑相关
+.rotate img{
+  animation: RotateCricle 15s linear infinite;
+}
+.rotatePause img{
+ animation-play-state:paused;
+  -webkit-animation-play-state:paused; /* Safari 和 Chrome */
+}
+@keyframes RotateCricle{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 自定义loading相关样式
+.xzw-loading{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  i{
+    color: $primary-color;
+    font-size: 30px;
+    // background: url('../assets/images/rhl.jpg') 100% 100% no-repeat;
+  }
+  p{
+    color: $primary-color;
+  }
+  .xzw-loading-box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.refleash{
+  animation: RotateCricle 1s linear infinite;
+}
+
+.xzw-loading_circular {
+  width: 40px;
+  height: 40px;
+  color: $primary-color;
+  margin-bottom: 20px;
+  circle{
+    animation: xzw-circular 1.5s ease-in-out infinite;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+}
+
+@keyframes xzw-circular{
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120;
+  }
+}
+
+// 榜单歌曲样式
+.music-list_item{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid $primary-color;
+  padding: 5px 0;
+  color: $dark-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .item-img{
+    width: 40px;
+  }
+  .item-songInfo{
+    width: calc(100% - 60px);
+    padding: 2px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .songName{
+      font-size: 14px;
+    }
+    .singerName{
+      font-size: 12px;
+    }
+  }
+}
