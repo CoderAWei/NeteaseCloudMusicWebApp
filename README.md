@@ -1,13 +1,22 @@
-# Vue3 + TypeScript + Vant3.0 实现网抑云音乐
+# 网抑云音乐
 
-Vue2版本在master分支哦！
+# Vue3 + TypeScript版本在**main**分支
 
-## 2021-01-29开始开发...
+## 让我们抑起来!
 
-## 本项目相关博客
+## 感谢API提供者[binaryify](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-- [Vue3+TypeScript项目构建之实现自定义指令v-loading， axios请求时的加载动画](https://juejin.cn/post/6938597240726356005)
-- [Vue3+Typescript项目构建之封装axios并防止重复请求](https://juejin.cn/post/6938597178013122591)
-- [Vue3+Typescript项目构建之Vuex模块化搭建（vuex-module-decorators）](https://juejin.cn/post/6938597502094409735)
-- [Vue3 + TypeScript项目构建之VantUI（V3版本）按需引入](https://juejin.cn/post/6938597818869219336)
-- [Vue3+TypeScript实现网易云音乐WebApp（播放界面：播放、暂停、音量控制、播放进度控制(点击/拖拽进度条)、上一首、下一首）](https://juejin.cn/post/6938666518733389860)
+# 目前已实现功能（Vue2版本）
+
+* [x] 歌曲播放 暂停 上一首 下一首 喜欢歌曲 歌词滚动展示 音量调节
+* [x] 我喜欢的音乐
+* [x] 私人FM
+* [x] 排行榜
+* [x] 搜索（热搜榜，历史记录）
+* [x] 个人主页展示
+* [x] 我的歌单
+* [x] 展示歌曲评论 上拉加载更多
+
+# 未实现功能
+* [ ] 发现页 ``歌单`` 和 ``电台`` 还没做
+

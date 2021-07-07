@@ -1,0 +1,78 @@
+.recommend-list{
+  &-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .img{
+      width: 50px;
+      height: 50px;
+    }
+    .song-detail{
+      width: 70%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 12px;
+      .singer{
+        color: #a39f9f;
+        font-size: 12px;
+      }
+    }
+    .play{
+      color: #a39f9f;
+      i{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+input[type='range']{
+  width: 100%;
+}
+
+@keyframes rotateIMG{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 歌曲列表 公共样式
+.songlist{
+  padding: 0 2% 0 0;
+  .single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 3px 5px 7px rgba(0,0,0,.2);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #E6E6FA;
+    border-radius: 4px;
+    color: rgb(12, 12, 12);
+    .info{
+      width: 80%;
+      .name{
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .singer{
+        font-size: 11px;
+        margin-top: 8px;
+        color: #a39f9f;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .play{
+      width: 4%;
+    }
+  }
+}
