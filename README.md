@@ -1,6 +1,8 @@
 # Vue3 + TypeScript + Vant3.0 实现网抑云音乐
 
-Vue2版本在master分支哦！
+**之前的github账号被封了，这是新号**
+
+Vue2版本在``vue2``分支哦！
 
 ## 2021-01-29开始开发...
 
